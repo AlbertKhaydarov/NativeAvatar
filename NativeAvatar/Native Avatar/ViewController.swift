@@ -37,18 +37,18 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     private func setupUI() {
         guard let navigationBar = navigationController?.navigationBar else { return }
-        if let prefersLargeTitles = navigationBar.subviews.filter({ NSStringFromClass(type(of: $0)).contains("LargeTitleView") }).first {
-            for subview in prefersLargeTitles.subviews {
-                prefersLargeTitles.addSubview(imageView)
-                NSLayoutConstraint.activate([
-                    imageView.rightAnchor.constraint(equalTo: prefersLargeTitles.rightAnchor,
-                                                     constant: -16),
-                    imageView.centerYAnchor.constraint(equalTo: subview.centerYAnchor),
-                    imageView.heightAnchor.constraint(equalToConstant: 36),
-                    imageView.widthAnchor.constraint(equalToConstant: 36)
-                ])
-            }
-        }
+//        if let prefersLargeTitles = navigationBar.subviews.filter({ NSStringFromClass(type(of: $0)).contains("LargeTitleView") }).first {
+//            for subview in prefersLargeTitles.subviews {
+//                prefersLargeTitles.addSubview(imageView)
+//                NSLayoutConstraint.activate([
+//                    imageView.rightAnchor.constraint(equalTo: prefersLargeTitles.rightAnchor,
+//                                                     constant: -16),
+//                    imageView.centerYAnchor.constraint(equalTo: subview.centerYAnchor),
+//                    imageView.heightAnchor.constraint(equalToConstant: 36),
+//                    imageView.widthAnchor.constraint(equalToConstant: 36)
+//                ])
+//            }
+//        }     
     }
 }
 
